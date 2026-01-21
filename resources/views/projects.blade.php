@@ -1,163 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyek Saya - Aditya Nurkhalid Indrawan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+@extends('layouts.main')
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
+@section('title', 'Proyek Saya - Aditya Nurkhalid Indrawan')
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/projects.css') }}">
+@endsection
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.1em;
-            opacity: 0.95;
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        h2 {
-            font-size: 2em;
-            color: #667eea;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
-        }
-
-        .project-image {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-        }
-
-        .project-info {
-            padding: 25px;
-        }
-
-        .project-info h3 {
-            color: #667eea;
-            font-size: 1.3em;
-            margin-bottom: 12px;
-        }
-
-        .project-info p {
-            color: #666;
-            margin-bottom: 15px;
-            font-size: 0.95em;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .tech-tag {
-            background: #f0f0f0;
-            color: #667eea;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
+@section('content')
     <header>
         <h1>Proyek Saya</h1>
         <p>Kumpulan proyek web yang telah saya buat</   p>
         <a href="/" class="back-button">← Kembali ke Beranda</a>
     </header>
 
-    <!-- Projects Container -->
+    
     <div class="container">
         <h2>Proyek Unggulan</h2>
         <div class="projects-grid">
-            <!-- Project 1 -->
+            
             <div class="project-card">
                 <div class="project-image">💼</div>
                 <div class="project-info">
@@ -171,7 +31,7 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
+        
             <div class="project-card">
                 <div class="project-image">📊</div>
                 <div class="project-info">
@@ -185,7 +45,7 @@
                 </div>
             </div>
 
-            <!-- Project 3 -->
+          
             <div class="project-card">
                 <div class="project-image">🛒</div>
                 <div class="project-info">
@@ -199,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- Project 4 -->
             <div class="project-card">
                 <div class="project-image">📱</div>
                 <div class="project-info">
@@ -213,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- Project 5 -->
+          
             <div class="project-card">
                 <div class="project-image">🎓</div>
                 <div class="project-info">
@@ -227,7 +86,7 @@
                 </div>
             </div>
 
-            <!-- Project 6 -->
+         
             <div class="project-card">
                 <div class="project-image">🍕</div>
                 <div class="project-info">
@@ -243,9 +102,9 @@
         </div>
     </div>
 
-    <!-- Footer -->
+  
     <footer>
         <p>&copy; 2026 Aditya Nurkhalid Indrawan. Semua hak dilindungi.</p>
     </footer>
-</body>
-</html>
+@endsection
+

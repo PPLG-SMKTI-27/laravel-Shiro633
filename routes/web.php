@@ -19,4 +19,3 @@ Route::get('/siswa/{nama}', function ($nama) {
     return "Nama siswa: " . $nama;
 });
 
-Route::get('/product', [ProductController::class, 'index']);
