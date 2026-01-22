@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\UserController;
+
+Route::get('/', [ProductController::class, 'index']);
 
 Route::get('/projects', function () {
     return view('projects');

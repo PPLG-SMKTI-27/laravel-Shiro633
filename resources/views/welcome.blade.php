@@ -13,7 +13,7 @@
                 <img src="/karbit.jpg" alt="Aditya Nurkhalid Indrawan">
             </div>
         </div>
-        <h1>Aditya Nurkhalid Indrawan</h1>
+        <h1><span>{{$nama}}</span></h1>
         <p>Pengembang Web | Spesialis Laravel & Full-Stack</p>
         <div class="social-links">
             <a href="#contact">Hubungi Saya</a>
@@ -64,42 +64,20 @@
     <section class="projects-section" id="projects">
         <h2>Proyek Unggulan</h2>
         <div class="projects-grid">
+            @foreach($projects as $project)
             <div class="project-card">
-                <div class="project-placeholder">💼</div>
+                <div class="project-placeholder">{{ $project['icon'] }}</div>
                 <div class="project-content">
-                    <h3>Proyek Satu</h3>
-                    <p>Aplikasi web modern yang dibangun dengan Laravel dan Vue.js, menampilkan pembaruan real-time dan desain responsif.</p>
+                    <h3><span>{{ $project['title'] }}</span></h3>
+                    <p>{{ $project['description'] }}</p>
                     <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">MySQL</span>
+                        @foreach($project['tags'] as $tag)
+                        <span class="tag">{{ $tag }}</span>
+                        @endforeach
                     </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-placeholder">📊</div>
-                <div class="project-content">
-                    <h3>Proyek Dua</h3>
-                    <p>Sistem manajemen data dengan analitik canggih, dashboard komprehensif, dan autentikasi pengguna.</p>
-                    <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Charts</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-placeholder">🎨</div>
-                <div class="project-content">
-                    <h3>Proyek Tiga</h3>
-                    <p>Platform e-commerce dengan integrasi pembayaran, manajemen inventaris, dan sistem pelacakan pesanan.</p>
-                    <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Payment API</span>
-                        <span class="tag">Responsive</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 
@@ -114,10 +92,7 @@
                 📧 <a href="mailto:aniindrawan08@gmail.com">aniindrawan08@gmail.com</a>
             </div>
             <div class="contact-info">
-                💼 <a href="https://linkedin.com" target="_blank">Profil LinkedIn</a>
-            </div>
-            <div class="contact-info">
-                🐙 <a href="https://github.com" target="_blank">Profil GitHub</a>
+                 <a href="http://github.com/Shiro633" target="_blank">Profil GitHub</a>
             </div>
             <a href="mailto:aniindrawan08@gmail.com" class="cta-button">Kirim Email</a>
         </div>
