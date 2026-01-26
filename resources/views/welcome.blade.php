@@ -10,7 +10,7 @@
     <header>
         <div class="profile-section">
             <div class="profile-frame">
-                <img src="/karbit.jpg" alt="Aditya Nurkhalid Indrawan">
+                <img src="/profile.jpg" alt="Aditya Nurkhalid Indrawan">
             </div>
         </div>
         <h1><span>{{$nama}}</span></h1>
@@ -18,6 +18,11 @@
         <div class="social-links">
             <a href="#contact">Hubungi Saya</a>
             <a href="/projects">Karya Saya</a>
+            @if (session('logged_in'))
+                <a href="/logout" class="login-btn logout-btn">Logout</a>
+            @else
+                <a href="/login" class="login-btn">Login</a>
+            @endif
         </div>
     </header>
 
@@ -94,7 +99,6 @@
             <div class="contact-info">
                  <a href="http://github.com/Shiro633" target="_blank">Profil GitHub</a>
             </div>
-            <a href="mailto:aniindrawan08@gmail.com" class="cta-button">Kirim Email</a>
         </div>
     </section>
 

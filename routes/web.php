@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', [ProductController::class, 'index']);
 
@@ -18,4 +18,9 @@ Route::get('/profil', function () {
 Route::get('/siswa/{nama}', function ($nama) {
     return "Nama siswa: " . $nama;
 });
+
+// Routes untuk Login
+Route::get('/login', [AuthController::class, 'showLogin']);
+Route::post('/login', [AuthController::class, 'processLogin']);
+Route::get('/logout', [AuthController::class, 'logout']);
 

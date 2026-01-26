@@ -28,7 +28,7 @@ class ProductController extends Controller
                 'icon' => '🎨',
                 'description' => 'Platform e-commerce dengan integrasi pembayaran, manajemen inventaris, dan sistem pelacakan pesanan.',
                 'tags' => ['Laravel', 'Payment API', 'Responsive']
-            ],
+            ]
         ];
 
         return view('welcome', compact('nama', 'projects'));
